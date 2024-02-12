@@ -1,0 +1,41 @@
+// import { useDispatch, useSelector } from 'react-redux'
+// import { applyMiddleware, bindActionCreators, combineReducers } from 'redux'
+// import { thunk } from 'redux-thunk'
+// import { actionCreators } from './state/Index'
+
+// //redux recap
+// npm i redux react-redux redux-thunk
+
+// action reducers are responsible for creating actions ,which contain differenct action functions ex:export const action =(value)=>{
+//     which in turns takes value and return function with dispatch arg giving an dispatch action
+//     return (dispatch)=>{
+//         dispatch({
+//             type:'action type',
+//             payload:data
+//         })
+//     }
+// }
+// all this actions are export as one using export * as actionCreators from 'path' from index.js file in state folder
+
+// reducers are responsible for taking actions and returning new updated states and how to stores it ,it's arguments are state,action
+// we export all reducers as one by combineReducers({
+//     reducerKey:actual reducer value
+// })
+
+// store is one that stores actual state value by importing store=createStore(reducers,{},applyMiddleware(thunk)
+//     // reducer,intial state which is empty,middle ware
+// )
+// to make it available throught out application we use Provider from redux for ex:
+// in main.jsx -> <Provider store={imported store}>
+//     <App/>
+// </Provider>
+
+// to access state use  useSelector(state=>state.state_name
+//     //in our case it might be amount/cash which is reducerKey in line 21
+//     )
+//     use its return value that stored in variable
+
+//     to perform actions 
+//     step1:const dispatch=useDispatch()
+//     let {action1,action2}=bindActionCreators(actionCreators,dispatch)//basically it wraps values that actionCreators returns and wraps it into dispatch function ,so that we can use it directily
+//     without bindActionCreators we can use dispatch({actionCreators.action1(value)})
