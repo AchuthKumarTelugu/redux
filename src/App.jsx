@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import Shop from './components/Shop'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+    //accessing state/reducer
+    const amount=useSelector(state=>state.amount)
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -31,7 +34,7 @@ export default function Navbar() {
                             </li>
                         </ul>
                        <button className="btn btn-primary" disabled={true}>
-                        Your balance is 0
+                        Your balance is {amount}
                        </button>
                     </div>
                 </div>
